@@ -7,9 +7,27 @@ body {
   background: #f6f6f6
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
 .wrapper {
+  /* position : relative; */
   overflow: hidden;
   min-width: 960px;
+  min-height: 100%;
+}
+
+/* компенсация футера с помощью псевдоэлемента */
+.wrapper:after {
+  content: "";
+  display: block;
+  height: 50px;
 }
 
 .container {
@@ -21,4 +39,16 @@ body {
   width: 960px;
   height: 80px;
   background: red;
+}
+
+/* компенсация футера -  пустой блок с */
+/* высотой, равной высоте футера */
+/*.empty {
+/*  height: 50px;
+/*}                                     */
+
+.footer {
+  height: 50px;
+  background: #414141;
+  margin-top: -50px;
 }
